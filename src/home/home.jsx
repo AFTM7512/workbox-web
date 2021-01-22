@@ -1,6 +1,6 @@
 import { Button } from "antd";
 
-import style from "./app.scss";
+import style from "./home.scss";
 
 
 function App() {
