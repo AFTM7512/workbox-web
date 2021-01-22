@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import 'antd/dist/antd.less'
-import App from './App.jsx';
+import App from './app/App.jsx';
 
 ReactDOM.render(
   <React.StrictMode>

@@ -1,11 +1,11 @@
-import style from "./test.scss"
-import "./test.less";
 import { Button } from "antd";
+
+import style from "./app.scss"
+
 
 function App() {
   return (
     <div className={ style.app }>
-      aaa
       <Button>Button</Button>
     </div>
   );
