@@ -12,10 +12,12 @@ const CustomerPage = AsyncComponents(() => import('../page/customer/Customer.jsx
 export default function CustomerRouter() {
   return (
     <div>
-      <Switch>
-        <Route path="/customer/sale" exact component={CustomerSalePage} />
-        <Route path="/customer/order" exact component={CustomerOrderPage} />
-      </Switch>
+      <CustomerPage>
+        <Switch>
+          <Route path="/customer/sale" exact component={CustomerSalePage} />
+          <Route path="/customer/order" exact component={CustomerOrderPage} />
+        </Switch>
+      </CustomerPage>
     </div>
   );
 }
