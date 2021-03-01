@@ -57,5 +57,6 @@ module.exports = {
         argsIgnorePattern: '^_|^err|^ev'
       }
     ],
-  }
+  },
+  "parser": "babel-eslint"
 };

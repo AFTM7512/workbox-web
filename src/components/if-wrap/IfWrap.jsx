@@ -6,7 +6,7 @@ export default function IfWrap(props) {
   const { when, children } = props;
   return (
     when ?
-    React.Children.map(children, item => item) : ''
+      React.Children.map(children, item => item) : <></>
   );
 }
 
