@@ -30,7 +30,7 @@ module.exports = {
     'no-useless-escape': 2,
     "no-extra-semi": 2,
     "no-console": 1,
-    "semi": 2, //强制使用分号
+    "semi": 1, //强制使用分号
     "semi-spacing": [2, { "before": false, "after": true }], // 强制分号前后不允许空格
     "no-irregular-whitespace": 0, //不规则的空白不允许
     "no-trailing-spaces": 'error', //一行结束后面有空格就发出警告
