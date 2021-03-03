@@ -1,0 +1,16 @@
+.home {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  &__side {
+    width: 80px;
+  }
+  &__container {
+    position: absolute;
+    left: 80px;
+    top: 0;
+    width: calc(100vw - 80px);
+  }
+}
+

@@ -1,0 +1,38 @@
+.side {
+  height: 100vh;
+  width: 100%;
+  color: $themeColor;
+  background-color: #fff;
+  box-shadow: 0 1px 5px 0 rgba(57,66,60,0.2);
+  &__menu {
+    padding: 16px 12px;
+    text-align: center;
+    &--item {
+      height: 56px;
+      width: 56px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 2px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 14px;
+      &-icon {
+        color: $theme;
+        font-size: 18px;
+      }
+
+      &:nth-child(1) {
+        font-size: 24px;
+      }
+      &:hover {
+        background-color: $themeGray;
+      }
+    }
+    // 激活状态
+    &-active {
+      color: $theme;
+      background-color: $themeGray;
+    }
+  }
+}
