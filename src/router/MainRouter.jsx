@@ -4,12 +4,16 @@ import {
   Route,
   Redirect
 } from "react-router-dom";
-import Home from "../page/home/Home.jsx";
+import HomePage from "../page/home-page/HomePage.jsx";
+import ToDo from "../page/todo/ToDo.jsx";
+import Plan from "../page/plan/Plan.jsx";
 
 export default function MainRouter() {
   return (
     <Switch>
-      <Route path="/home" exact component={ Home }></Route>
+      <Route path="/home/homePage" component={HomePage}></Route>
+      <Route path="/home/todo" component={ToDo}></Route>
+      <Route path="/home/plan" component={Plan}></Route>
       <Redirect exact to="/home/homePage" />
     </Switch>
   );

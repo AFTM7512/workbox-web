@@ -6,13 +6,13 @@ import {
 } from "react-router-dom";
 import { ConfigProvider } from 'antd';
 import zhCN from 'antd/lib/locale/zh_CN';
-import MainRouter from "../router/MainRouter.jsx";
+import Home from "../page/home/Home.jsx";
 
 function App() {
   return (
-    <ConfigProvider locale={ zhCN }>
+    <ConfigProvider locale={zhCN}>
       <Router>
-        <MainRouter />
+        <Route path="/home" component={Home} />
       </Router>
     </ConfigProvider>
   );

@@ -2,18 +2,15 @@ import React, { useState, useEffect } from "react";
 import styles from "./side.scss";
 import { withRouter } from 'react-router-dom';
 
-function Side() {
-  const [activeKey, setActiveKey] = useState('workbox');
+
+function Side(props) {
+  const { pathname } = props.location;
+  const [activeKey, setActiveKey] = useState();
 
   const menu = [
     {
-      key: 'workbox',
+      key: 'homePage',
       name: 'W',
-    },
-    {
-      key: 'inspiration',
-      name: '灵感',
-      icon: '',
     },
     {
       key: 'todo',
@@ -28,45 +25,34 @@ function Side() {
   ];
 
   useEffect(() => {
-    initData();
-  }, []);
+    console.log(123);
+    const aPath = pathname.split('/');
+    if (aPath && aPath.length >= 2) setActiveKey(aPath[2]);
+  }, [pathname]);
 
-  function initData() {
-
-  }
 
   // 修改选中
   function handleCheck(key) {
     if (activeKey !== key) {
       setActiveKey(key);
+      props.history.push(`/home/${key}`);
     }
   }
 
   return (
-    <div className={ styles.side }>
-      <ul className={ styles['side__menu'] }>
+    <div className={styles.side}>
+      <ul className={styles['side__menu']}>
         {
-          menu.map((item, index) => {
-            if (index === 0) {
-              return (
-                <li
-                  key={ item.key }
-                  className={ `${styles['side__menu--item']} ${ activeKey === item.key ? styles['side__menu-active'] : '' }` }
-                  onClick={ () => handleCheck(item.key) }>
-                  <span>{ item.name }</span>
-                </li>
-              );
-            } else {
-              return (
-                <li
-                  key={ item.key }
-                  className={ `${styles['side__menu--item']} ${ activeKey === item.key ? styles['side__menu-active'] : '' }` }
-                  onClick={ () => handleCheck(item.key) }>
-                  <i className={ `iconfont icon-vip ${ styles['side__menu--item-icon'] }`}></i>
-                  <span>{ item.name }</span>
-                </li>
-              );
-            }
+          menu.map((item) => {
+            return (
+              <li
+                key={item.key}
+                className={`${styles['side__menu--item']} ${activeKey === item.key ? styles['side__menu-active'] : ''}`}
+                onClick={() => handleCheck(item.key)}>
+                <i className={`iconfont icon-vip ${styles['side__menu--item-icon']}`}></i>
+                <span>{item.name}</span>
+              </li>
+            );
           })
         }
       </ul>
