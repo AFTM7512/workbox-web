@@ -166,7 +166,7 @@ module.exports = function (webpackEnv) {
             lessOptions: {
               javascriptEnabled: true,
               modifyVars: {
-                'primary-color': '#1DA57A',
+                'primary-color': '#25b864',
               }
             },
           },
@@ -539,7 +539,7 @@ module.exports = function (webpackEnv) {
                   loader: 'sass-resources-loader',
                   options: {
                     resources: [
-                      path.resolve(__dirname, '../variable.scss'),
+                      path.resolve(__dirname, '../src/variable.scss'),
                     ]
                   }
                 }

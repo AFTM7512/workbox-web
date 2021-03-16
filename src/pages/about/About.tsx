@@ -6,6 +6,7 @@ const About : FC = () => (
     About Page
     <div><Link to="/home">To Home</Link></div>
     <div><Link to="/home/header">To Home/Header</Link></div>
+    <i className="iconfont icon-integral"></i>
   </div>
 );
 
