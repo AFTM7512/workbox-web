@@ -37,6 +37,6 @@ const Side: FC = () => {
       </ul>
     </div>
   );
-}
+};
 
 export default Side;

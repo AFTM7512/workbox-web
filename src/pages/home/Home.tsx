@@ -5,8 +5,6 @@ import { IRouterConfig } from "./home-interface";
 import styles from "./home.scss";
 
 const Home: FC<IRouterConfig> = ({ routes }) => {
-  console.log(111);
-
   return (
     <div className={ styles.home }>
       <div className={ styles.home__side }>
