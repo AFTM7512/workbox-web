@@ -1,30 +1,35 @@
-import React, { ComponentType } from "react";
-import Home from "pages/home/Home";
-import Header from "pages/home/header/Header";
-import About from "pages/about/About";
-import IRouteItem from "./types";
 
+import IRouteItem from "./types";
+import Home from "pages/home/Home";
+import Todo from "pages/todo/Todo";
+import Plan from "pages/plan/Plan";
+import Doc from "pages/doc/Doc";
 
 type IRouter = IRouteItem[]
 
 
 const router: IRouter = [
   {
-    key: 'home',
-    path: '/home',
+    key: '/',
+    path: '/',
     component: Home,
     routes: [
       {
-        key: 'header',
-        path: '/home/header',
-        component: Header,
+        key: 'todo',
+        path: '/todo',
+        component: Todo,
+      },
+      {
+        key: 'plan',
+        path: '/plan',
+        component: Plan,
+      },
+      {
+        key: 'doc',
+        path: '/doc',
+        component: Doc,
       }
     ]
-  },
-  {
-    key: 'about',
-    path: '/about',
-    component: About,
   },
 ];
 

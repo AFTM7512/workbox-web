@@ -2,17 +2,23 @@ import React, { FC } from "react";
 import RenderRouter from "router/RenderRouter";
 import Side from "./side/Side";
 import { IRouterConfig } from "./home-interface";
-import { Button } from "antd";
+import styles from "./home.scss";
 
-const Home: FC<IRouterConfig> = ({ routes}) => {
+const Home: FC<IRouterConfig> = ({ routes }) => {
+  console.log(111);
+
   return (
-    <div>
-      <Side />
+    <div className={ styles.home }>
+      <div className={ styles.home__side }>
+        <Side />
+      </div>
 
       {/* 渲染子路由 */}
-      {
-        routes && <RenderRouter routes={routes} />
-      }
+      <div className={ styles.home__content }>
+        {
+          routes && <RenderRouter routes={routes} />
+        }
+      </div>
     </div>
   );
 };

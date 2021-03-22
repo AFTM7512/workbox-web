@@ -7,19 +7,19 @@ interface IMenuItem {
 
 const menu: IMenuItem[] = [
   {
-    key: 'to',
-    path: '/to',
-    name: 'To'
-  },
-  {
-    key: 'do',
-    path: '/do',
-    name: 'Do'
+    key: 'todo',
+    path: '/todo',
+    name: 'todo'
   },
   {
     key: 'plan',
     path: '/plan',
-    name: 'Plan'
+    name: 'plan'
+  },
+  {
+    key: 'doc',
+    path: '/doc',
+    name: 'doc'
   },
 ];
 
